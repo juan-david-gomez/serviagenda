@@ -1,0 +1,11 @@
+<h1>Login</h1>
+<div class="well container">
+		<form class="form-signin" role="form" ng-submit="vm.entrar()" >
+	        <input type="email" class="form-control" placeholder="Email" ng-model="user.email"  required="" autofocus="">
+	        <br>
+	        <input type="password" class="form-control" placeholder="Password" ng-model="user.password" required="">
+			<br>
+			<input type="submit" class="btn btn-success col-xs-12" value="Entrar" />
+			<a class="btn btn-default col-xs-12" ui-sref="root.registro" >Registrate aquí</a>
+	  </form>
+</div>

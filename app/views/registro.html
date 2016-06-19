@@ -1,0 +1,13 @@
+<h1>Registro</h1>
+<div class="well">
+		<form class="form-signin" role="form" ng-submit="vm.registrar()">
+	        <input type="text" class="form-control" placeholder="Nombre" ng-model="user.nombre" required="">
+			<br>
+	        <input type="email" class="form-control" placeholder="Email" ng-model="user.email"  required="" autofocus="">
+	        <br>
+	        <input type="password" class="form-control" placeholder="Clave" ng-model="user.password" required="">
+			<br>
+			<a class="btn btn-default" ui-sref="root.login" >Cancelar</a>
+			<input type="submit" class="btn btn-success" value="Registrarse" ></input>
+	  </form>
+</div>

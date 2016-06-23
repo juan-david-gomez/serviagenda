@@ -23,7 +23,7 @@ var app = angular
     'ui.bootstrap',
     'ui.calendar'
   ]);
-  app.constant('FIREBASE','https://testauthjuan.firebaseio.com/')
+  app.constant('FIREBASE','https://serviagendaref.firebaseio.com/')
   .config(function ($stateProvider, $urlRouterProvider) {
    $stateProvider
       //Estados y rutas - App seccion  

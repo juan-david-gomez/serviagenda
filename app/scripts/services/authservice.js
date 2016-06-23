@@ -23,11 +23,11 @@
         })
         .then(
           function(authData){
-            session.setAuthData(authData);
 
             var userInfo = usuarios.getUserInfo(authData.uid);
             
             return userInfo.then(function  (data) {
+              session.setAuthData(authData);
               session.setUserInfo(data);
               // console.log($q);
               return authData;

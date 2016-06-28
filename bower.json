@@ -29,8 +29,8 @@
         "dist/js/bootstrap.js"
       ]
     },
-    "fullcalendar":{
-      "main":[
+    "fullcalendar": {
+      "main": [
         "dist/fullcalendar.css",
         "dist/fullcalendar.js",
         "dist/lang/es.js"

@@ -1,10 +1,22 @@
 
 <div class="contariner-fluid">
-  <div class="col-md-12">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+         <form ng-submit="addEvent()">
+		  <input  required ng-model="newEvent.title" type="text" placeholder="Title">
+		  <input required type="datetime-local" ng-model="newEvent.start">
+		  <input required type="datetime-local" ng-model="newEvent.end">
+		  <input type="submit" value="Add">
+		</form>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
     <div class="panel panel-default">
       <div class="panel-body">
           <div ui-calendar="uiConfig.calendar" ng-model="eventSources" ></div>
-
       </div>
     </div>
   </div>

@@ -10,14 +10,9 @@
  */
 app
   .controller('MainCtrl', function ($scope,citas,session) {
-  	 var date = new Date();
-    var d = date.getDate();
-    var m = date.getMonth();
-    var y = date.getFullYear();
   	$scope.uiConfig = {
   	    calendar: {
   	        lang: 'es',
-  	        // height: 450,
   	        axisFormat: 'h(:mm) a',
       			timeFormat: 'h(:mm) a',
       			defaultView: 'agendaWeek',
@@ -39,9 +34,26 @@ app
      //   // {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
      //   // {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
      // ];
-     // console.log($scope.events);
-     $scope.events = [];
-    $scope.eventSources = [$scope.events];
+    var citasList = citas.getCitas();
+    console.log(citasList);
+    citasList.then(function  (data) {
+      console.log(data);
+      data.forEach(function  (ob) {
+        var newEvent = {
+          title: ob.title,
+          start: new Date(ob.start),
+          end: new Date(ob.end),
+        };
+        $scope.events.push(newEvent);
+        console.log(ob);
+        console.log(newEvent);
+      });
+    });
+    $scope.events = [];
+    $scope.eventsF = function (start, end, timezone, callback) {
+      callback($scope.events);
+    };
+    $scope.eventSources = [$scope.events,$scope.eventsF];
 
 
     $scope.newEvent = {
@@ -52,7 +64,6 @@ app
 
     $scope.addEvent = function(){
       $scope.newEvent.userId = session.getAuthData().uid;
-      console.log($scope.newEvent);
       $scope.events.push($scope.newEvent);
       citas.registerCitas($scope.newEvent);
 
@@ -61,5 +72,5 @@ app
         start: '',
         end: ''
       };
-    }
+    };
 });

@@ -24,25 +24,15 @@ app
           }
         })
 
-        var fire = $firebaseArray(ref);
-        // console.log()
         console.log(ref.push(citas));
         return true;
-        // return false;
         
       },
-      getCitas: function  (uid) {
+      getCitas: function  () {
 
-        // var userInfo = $firebaseArray(ref.child(uid));
-        var userInfo = $firebaseArray(ref);
+        var citas = $firebaseArray(ref);
+        return citas.$loaded();
 
-        return userInfo.$loaded()
-              .then(function (arr) 
-              {
-                // console.log(arr.$getRecord(uid)); 
-                // delete userInfo["$$conf"];
-                return arr.$getRecord(uid);
-              });
       }
 
     };

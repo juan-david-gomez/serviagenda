@@ -35,9 +35,7 @@ app
      //   // {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
      // ];
     var citasList = citas.getCitas();
-    console.log(citasList);
-    citasList.then(function  (data) {
-      console.log(data);
+    citasList.$loaded().then(function  (data) {
       data.forEach(function  (ob) {
         var newEvent = {
           title: ob.title,
@@ -45,10 +43,9 @@ app
           end: new Date(ob.end),
         };
         $scope.events.push(newEvent);
-        console.log(ob);
-        console.log(newEvent);
       });
     });
+    citasList.$bindTo($scope, "events");
     $scope.events = [];
     $scope.eventsF = function (start, end, timezone, callback) {
       callback($scope.events);

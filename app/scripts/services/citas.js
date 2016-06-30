@@ -8,7 +8,7 @@
  * Factory in the firebaseAngularApp.
  */
 app
-  .factory('citas', function ($firebaseArray, FIREBASE) {
+  .factory('citas', function ($firebaseObject, FIREBASE) {
     
     var ref = new Firebase(FIREBASE+'citas');
     
@@ -30,8 +30,8 @@ app
       },
       getCitas: function  () {
 
-        var citas = $firebaseArray(ref);
-        return citas.$loaded();
+        var citas = $firebaseObject(ref);
+        return citas;
 
       }
 

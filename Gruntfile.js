@@ -31,6 +31,22 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+    sass: {                              // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          style: 'expanded',
+          loadPath: 'bower_components/bootstrap-sass/assets/stylesheets',
+        },
+        files: [{                         // Dictionary of files
+          expand: true,
+          cwd: '<%= yeoman.app %>/sass',
+          src: ['*.scss'],
+          dest: '<%= yeoman.app %>/styles',
+          ext: '.css'
+        }]
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -49,8 +65,8 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'postcss']
+        files: ['<%= yeoman.app %>/sass/{,*/}*.scss','<%= yeoman.app %>/styles/{,*/}*.css'],
+        tasks: ['newer:copy:styles', 'postcss','sass']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -434,6 +450,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'sass',
       'wiredep',
       'concurrent:server',
       'postcss:server',
@@ -458,6 +475,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'sass',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
@@ -480,4 +498,8 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-contrib-sass');
+
+  grunt.registerTask('sassCompile', ['sass']);
 };

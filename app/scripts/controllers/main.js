@@ -15,6 +15,7 @@ app
   	        lang: 'es',
   	        axisFormat: 'h(:mm) a',
       			timeFormat: 'h(:mm) a',
+            height:'400px',
       			defaultView: 'agendaWeek',
       	    editable: true,
       	    header: {
@@ -52,7 +53,7 @@ app
     };
     $scope.eventSources = [$scope.events,$scope.eventsF];
 
-
+    /*
     $scope.newEvent = {
       title: '',
       start: '',
@@ -70,4 +71,5 @@ app
         end: ''
       };
     };
+    */
 });

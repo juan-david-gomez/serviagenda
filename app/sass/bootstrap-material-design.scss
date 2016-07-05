@@ -1,14 +1,19 @@
 
 @import '../../bower_components/bootstrap-material-design/sass/_variables';
-
-/*Sobresivo las variables por defecto de bootstrap-material-design */
-
-/*FIN :Sobresivo las variables por defecto de bootstrap-material-design */
-
+$brand-info : $brand-primary;
 @import '../../bower_components/bootstrap-material-design/sass/_mixins';
 @import '../../bower_components/bootstrap-material-design/sass/_shadows';
 @import '../../bower_components/bootstrap-material-design/sass/_core';
 
-body{
-	background-color: $brand-primary;
+.uib-datepicker {
+	table{
+	 	min-width: 100% !important;
+	}
+
+	.btn{
+		padding: 0px 0px !important;
+	}
+	.btn-info.active{
+		color: #fff !important;
+	}
 }

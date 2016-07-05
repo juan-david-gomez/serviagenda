@@ -34,8 +34,6 @@ Then, run this script to get the list@mixin (function(){
 */
 /* ANIMATION */
 /* SHADOWS */
-/*Sobresivo las variables por defecto de bootstrap-material-design */
-/*FIN :Sobresivo las variables por defecto de bootstrap-material-design */
 /* Shadows (from mdl http://www.getmdl.io/) */
 body {
   background-color: #EEEEEE;
@@ -144,7 +142,7 @@ body .container .well-info,
 body .container .jumbotron-info,
 body .container-fluid .well-info,
 body .container-fluid .jumbotron-info {
-  background-color: #03a9f4;
+  background-color: #009688;
 }
 body .container .well-warning,
 body .container .jumbotron-warning,
@@ -204,7 +202,7 @@ body .container-fluid .jumbotron-danger {
 }
 .btn:not(.btn-raised).btn-info,
 .input-group-btn .btn:not(.btn-raised).btn-info {
-  color: #03a9f4;
+  color: #009688;
 }
 .btn:not(.btn-raised).btn-warning,
 .input-group-btn .btn:not(.btn-raised).btn-warning {
@@ -259,7 +257,7 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-raised.btn-info,
 .input-group-btn .btn.btn-fab.btn-info, .btn-group-raised
 .input-group-btn .btn.btn-info {
-  background-color: #03a9f4;
+  background-color: #009688;
   color: rgba(255,255,255, 0.84);
 }
 .btn.btn-raised.btn-warning, .btn.btn-fab.btn-warning, .btn-group-raised .btn.btn-warning,
@@ -353,7 +351,7 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn:not(.btn-link):focus.btn-info, .btn-group-raised
 .input-group-btn .btn:not(.btn-link).active.btn-info, .btn-group-raised
 .input-group-btn .btn:not(.btn-link):active.btn-info {
-  background-color: #039be0;
+  background-color: #008276;
 }
 .btn.btn-raised:not(.btn-link):hover.btn-warning, .btn.btn-raised:not(.btn-link):focus.btn-warning, .btn.btn-raised:not(.btn-link).active.btn-warning, .btn.btn-raised:not(.btn-link):active.btn-warning, .btn-group-raised .btn:not(.btn-link):hover.btn-warning, .btn-group-raised .btn:not(.btn-link):focus.btn-warning, .btn-group-raised .btn:not(.btn-link).active.btn-warning, .btn-group-raised .btn:not(.btn-link):active.btn-warning,
 .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-warning,
@@ -620,7 +618,7 @@ fieldset[disabled][disabled] .btn.btn-raised, fieldset[disabled][disabled] .btn.
 }
 .btn-group.open > .dropdown-toggle.btn.btn-info,
 .btn-group-vertical.open > .dropdown-toggle.btn.btn-info {
-  background-color: #03a9f4;
+  background-color: #009688;
 }
 .btn-group.open > .dropdown-toggle.btn.btn-warning,
 .btn-group-vertical.open > .dropdown-toggle.btn.btn-warning {
@@ -1209,7 +1207,7 @@ output {
   background-color: #4caf50;
 }
 .label.label-info {
-  background-color: #03a9f4;
+  background-color: #009688;
 }
 .label.label-warning {
   background-color: #ff5722;
@@ -1332,11 +1330,11 @@ output {
   box-shadow: none;
 }
 .form-group.has-info.is-focused .form-control {
-  background-image: linear-gradient(#03a9f4, #03a9f4), linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#009688, #009688), linear-gradient(#D2D2D2, #D2D2D2);
 }
 .form-group.has-info label.control-label,
 .form-group.has-info .help-block {
-  color: #03a9f4;
+  color: #009688;
 }
 .form-group textarea {
   resize: none;
@@ -1989,7 +1987,7 @@ legend {
   color: rgba(255,255,255, 0.84);
 }
 .navbar.navbar-info {
-  background-color: #03a9f4;
+  background-color: #009688;
   color: rgba(255,255,255, 0.84);
 }
 .navbar.navbar-info .navbar-form .form-group input.form-control::-moz-placeholder,
@@ -2012,11 +2010,11 @@ legend {
   padding: 13px 16px;
 }
 .navbar.navbar-info .dropdown-menu li > a:hover, .navbar.navbar-info .dropdown-menu li > a:focus {
-  color: #03a9f4;
+  color: #009688;
   background-color: #eeeeee;
 }
 .navbar.navbar-info .dropdown-menu .active > a {
-  background-color: #03a9f4;
+  background-color: #009688;
   color: rgba(255,255,255, 0.84);
 }
 .navbar.navbar-info .dropdown-menu .active > a:hover, .navbar.navbar-info .dropdown-menu .active > a:focus {
@@ -2156,7 +2154,7 @@ legend {
   color: rgba(255,255,255, 0.84);
 }
 .alert.alert-info {
-  background-color: #03a9f4;
+  background-color: #009688;
   color: rgba(255,255,255, 0.84);
 }
 .alert.alert-info a, .alert.alert-info .alert-link {
@@ -2205,7 +2203,7 @@ legend {
   background-color: #4caf50;
 }
 .progress .progress-bar.progress-bar-info {
-  background-color: #03a9f4;
+  background-color: #009688;
 }
 .progress .progress-bar.progress-bar-warning {
   background-color: #ff5722;
@@ -2231,7 +2229,7 @@ legend {
 }
 
 .text-info {
-  color: #03a9f4;
+  color: #009688;
 }
 
 .nav-tabs {
@@ -2394,7 +2392,7 @@ legend {
   background-color: #4caf50;
 }
 .panel.panel-info > .panel-heading {
-  background-color: #03a9f4;
+  background-color: #009688;
 }
 .panel.panel-warning > .panel-heading {
   background-color: #ff5722;
@@ -2622,7 +2620,7 @@ hr.on-light {
   background-color: #4caf50;
 }
 .slider.slider-info.noUi-connect {
-  background-color: #03a9f4;
+  background-color: #009688;
 }
 .slider.slider-warning.noUi-connect {
   background-color: #ff5722;
@@ -2643,7 +2641,7 @@ hr.on-light {
   background-color: #4caf50;
 }
 .slider.slider-info .noUi-connect {
-  background-color: #03a9f4;
+  background-color: #009688;
 }
 .slider.slider-warning .noUi-connect {
   background-color: #ff5722;
@@ -2664,7 +2662,7 @@ hr.on-light {
   background-color: #4caf50;
 }
 .slider.slider-info .noUi-handle {
-  background-color: #03a9f4;
+  background-color: #009688;
 }
 .slider.slider-warning .noUi-handle {
   background-color: #ff5722;
@@ -2685,7 +2683,7 @@ hr.on-light {
   border-color: #4caf50;
 }
 .slider.slider-info .noUi-handle {
-  border-color: #03a9f4;
+  border-color: #009688;
 }
 .slider.slider-warning .noUi-handle {
   border-color: #ff5722;
@@ -2795,8 +2793,14 @@ hr.on-light {
   color: #757575;
 }
 
-body {
-  background-color: #009688;
+.uib-datepicker table {
+  min-width: 100% !important;
+}
+.uib-datepicker .btn {
+  padding: 0px 0px !important;
+}
+.uib-datepicker .btn-info.active {
+  color: #fff !important;
 }
 
 /*# sourceMappingURL=bootstrap-material-design.css.map */

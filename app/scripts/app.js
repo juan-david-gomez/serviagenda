@@ -21,7 +21,8 @@ var app = angular
     'ui.router',
     'firebase',
     'ui.bootstrap',
-    'ui.calendar'
+    'ui.calendar',
+    'ui.bootstrap.datepicker'
   ]);
   app.constant('FIREBASE','https://serviagendaref.firebaseio.com/')
   .config(function ($stateProvider, $urlRouterProvider) {

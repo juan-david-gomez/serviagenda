@@ -1,22 +1,51 @@
 
 <div class="contariner-fluid">
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-body">
-         <!-- <form ng-submit="addEvent()">
-			  <input  required ng-model="newEvent.title" type="text" placeholder="Title">
-			  <input required type="datetime-local" ng-model="newEvent.start">
-			  <input required type="datetime-local" ng-model="newEvent.end">
-			  <input type="submit" value="Add">
-		</form> -->
-      </div>
-    </div>
-  </div>
-  <div class="col-md-9">
-    <div class="panel panel-default">
-      <div class="panel-body">
-          <div ui-calendar="uiConfig.calendar" ng-model="eventSources" ></div>
-      </div>
-    </div>
-  </div>
+	<div class="col-lg-3">
+		<div class="row-fluid">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+					<uib-datepicker ng-model="dt" class="" datepicker-options="options"></uib-datepicker>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+					<h4>Personal</h4>
+					<ul class="list-group">
+					  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Juan David facilisis in  <span class="badge">15</span></a>
+					  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Juan David risus  <span class="badge">14</span></a>
+					  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Juan David consectetur  <span class="badge">4</span></a>
+					  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Juan David eros  <span class="badge">1</span></a>
+					</ul>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+					<h4>Servicios</h4>
+					<ul class="list-group">
+					  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Servicio facilisis in  <span class="badge">15</span></a>
+					  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Servicio risus  <span class="badge">14</span></a>
+					  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Servicio consectetur  <span class="badge">4</span></a>
+					  <a href="#" class="list-group-item"><i class="glyphicon glyphicon-tags"></i> Servicio eros  <span class="badge">1</span></a>
+					</ul>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-9">
+		<div class="panel panel-default">
+		  <div class="panel-body">
+		      <div ui-calendar="uiConfig.calendar" ng-model="eventSources" ></div>
+		  </div>
+		</div>
+	</div>	
 </div>

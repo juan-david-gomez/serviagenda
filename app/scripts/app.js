@@ -70,6 +70,20 @@ var app = angular
           },
       })
 
+      .state('app.clientes', {
+          url: '/clientes',
+          views: {
+            '@': {
+              templateUrl: 'views/clientes.html',
+              controller: 'clientesCtrl',
+              controllerAs: 'vm'
+            }
+          },
+          params: {
+            'requireLogin': true, 
+          },
+      })
+
       //Estados y rutas - Root seccion  
       .state('root', {
         url: '',

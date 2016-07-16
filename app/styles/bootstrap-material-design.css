@@ -2793,6 +2793,10 @@ hr.on-light {
   color: #757575;
 }
 
+.list-group .list-group-item {
+  padding: 2px 16px;
+}
+
 .uib-datepicker table {
   min-width: 100% !important;
 }

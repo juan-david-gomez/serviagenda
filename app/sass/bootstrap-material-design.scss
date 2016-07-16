@@ -5,6 +5,12 @@ $brand-info : $brand-primary;
 @import '../../bower_components/bootstrap-material-design/sass/_shadows';
 @import '../../bower_components/bootstrap-material-design/sass/_core';
 
+.list-group {
+	.list-group-item{
+	    padding: 2px 16px;
+	}
+}
+
 .uib-datepicker {
 	table{
 	 	min-width: 100% !important;

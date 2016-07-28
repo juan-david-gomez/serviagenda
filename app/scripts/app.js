@@ -84,6 +84,35 @@ var app = angular
           },
       })
 
+      .state("app.clientes.edit", {
+          url: "/:id/edit",
+          onEnter: function($stateParams,$uibModal) {
+
+            var modalInstance = $uibModal.open({
+              templateUrl: 'myModalContent.html',
+              controller: 'clientesCtrl',
+              controllerAs: 'vm',
+            });
+          },
+          onExit: function() {
+             // alert("Bye");
+          }
+      })
+
+      .state('app.clientes.view', {
+          url: '/:id/',
+          views: {
+            '@': {
+              templateUrl: 'views/clientesView.html',
+              controller: 'clientesCtrl',
+              controllerAs: 'vm'
+            }
+          },
+          params: {
+            'requireLogin': true, 
+          },
+      })
+
       //Estados y rutas - Root seccion  
       .state('root', {
         url: '',

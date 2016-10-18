@@ -24,7 +24,7 @@ app
           }
         })
 
-        console.log(ref.push(citas));
+        // console.log(ref.push(citas));
         return true;
         
       },

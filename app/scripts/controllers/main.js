@@ -9,7 +9,7 @@
  http://www.jvandemo.com/learn-how-to-make-authentication-in-your-angular-applications-simpler-and-more-consistent/
  */
 app
-  .controller('MainCtrl', function ($scope,citas,session) {
+  .controller('MainCtrl', function ($scope,citas,session,uiCalendarConfig) {
 
     function getDayClass(data) {
       console.log(data);
@@ -44,6 +44,21 @@ app
             height:'400px',
       			defaultView: 'agendaWeek',
       	    editable: false,
+            selectable: true,
+            select: function(start, end) {
+              var title = prompt('Event Title:');
+              var eventData;
+              if (title) {
+                eventData = {
+                  title: title,
+                  start: start,
+                  end: end
+                };
+                $scope.events.push(eventData);
+                // uiCalendarConfig.calendars.myCalendar.fullCalendar('renderEvent', eventData, true); // stick? = true
+              }
+              uiCalendarConfig.calendars.myCalendar.fullCalendar('unselect');
+            },
             allDaySlot: false,
       	    header: {
       	        left: 'prev,today,next',
